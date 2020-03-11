@@ -1,0 +1,529 @@
+body{
+    align-content: center;
+    background-color: rgb(223, 244, 250);
+    padding: 0;
+    margin: 0 auto;
+    margin-top:50px;
+    width: 100%;
+}
+#header{
+    background: white;
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 5px solid black;
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin-bottom: 20px;
+}
+ul.headUL{
+    list-style: none;
+}
+
+ul.headUL li{
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    text-align: right;
+}
+
+ul.headUL li a{
+    display: block;
+    color:rgb(8, 8, 92);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul.headUL li a:hover{
+    color: white;
+    background: royalblue;
+    padding: 5px;
+    padding-bottom: 0px;
+}
+
+ul.headUL li ul.subMenu{
+    min-width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+}
+
+ul.headUL li:hover ul.subMenu{
+    display: block;
+}
+
+ul.headUL li ul.subMenu li{
+    display: block;
+}
+
+
+#header img{
+    background: center;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#name{
+    color: rgb(8, 8, 92);
+    size: 100px;
+    font-weight: bold;
+    padding: 15px 10px 10px 20px;
+    position: relative;
+    float: left;
+}
+
+nav{
+    float: right;
+    padding: 20px;
+    font-family: sans-serif; /*anoter font miss*/
+}
+
+/* .space2{
+    padding: 50px;
+    margin: 50px;
+} */
+
+#cover {    
+    width: 680px;
+    margin: 0 auto;
+}
+
+
+#cover img{
+    border: 2px solid #2F4F4F;
+    padding-top: 20px;
+}
+
+.popUp{
+    width: 50%;
+    font-style: italic;
+    text-align: center;
+    color: black;
+    background: cadetblue;
+    padding: 20px;
+    margin: 25%;
+    display: none;
+}
+
+.popUp img{
+    max-width: 10%;
+}
+
+#about{
+    margin: 40px auto;
+    padding: 20px 0;
+    width: 50%;
+    transform: translate(0%, 75%);
+    color: rgb(60, 77, 110);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    box-sizing: content-box;
+    text-align: center;
+    display: none;
+}
+
+#about h1{
+    font: bold;
+    color: blue;
+    font-size: 40px;
+}
+#about h2{
+    font-size: 25px;
+    color: black;
+
+}
+#details{
+    margin: 40px auto;
+    text-align: center;
+    padding: 100px 0;
+    font-style: italic;
+    font-size: 20px;
+    box-sizing: content-box;
+    transform: translate(0%, 75%);
+}
+#details input{
+    font-style: italic;
+    font-size: 20px;
+    color: blue;
+}
+
+#details button{
+    font-size: 20px;
+    /* margin-right: 16px;
+    background: #ddd; */
+    cursor: pointer;
+    /* padding: 10px 10px; */
+}
+
+#details :hover{
+    color: #2F4F4F;
+}
+#destination {
+    width: 50%;
+    margin: 0px auto;
+    padding: 30px;
+    display: none;
+    text-align: center;
+} 
+
+.article1{
+    padding: 40px;
+    margin: 40px;
+}
+
+#destination h2{
+    color: black;
+    font: bold;
+    font-size: 35px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#destination img{
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    max-height: 200px;  
+}
+
+#destination button{
+    font-size: 10px;
+    color: indigo;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+#destination p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: darkblue;
+    width: 100%;
+}
+
+#destination p span{
+    text-decoration: underline;
+    color: black;
+
+}
+
+#destination .date{
+    color: indigo;
+}
+
+ 
+#toDo{
+    /* color: purple; */
+    top: 40px;
+    padding: 60px;
+    margin: 60px;
+}
+
+.myList{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    padding: 100px;
+    margin: 40px;
+}
+.myList h2{
+    color: white;
+    background-color: #196ddb;
+    padding: 30px 40px;
+    text-align: center;
+    font: bold;
+}
+
+
+
+ul.favorite{
+    list-style: none;
+    background-color: white;
+    
+}
+ul.favorite li{
+    cursor: pointer;
+    list-style-type: none;
+
+    color: rgb(8, 8, 92);
+    text-align: right;
+    font-size: 18px;
+    font-family: cursive;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.tool{
+    position: relative;
+    display: inline-block;
+}
+
+.aboutLike {
+    position: relative;
+    display: inline-block;
+}
+
+.toolTip{
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.toolTip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tool:hover  .toolTip{
+    visibility: visible;
+    opacity: 1;
+}
+.aboutLike:hover  .toolTip{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul.listUL {
+margin: 0;
+padding: 0;
+}
+
+/* Style the list items */
+ul.listUL li {
+cursor: pointer;
+position: relative;
+padding: 12px 8px 12px 40px;
+list-style-type: none;
+background: #eee;
+font-size: 18px;
+transition: 0.2s;
+
+/* make the list items unselectable */
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+text-align: right;
+padding-right: 45px;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul.listUL li:nth-child(odd) {
+background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul.listUL li:hover {
+background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul.listUL li.checked {
+background: #888;
+color: #fff;
+text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul.listUL li.checked::before {
+content: '';
+position: absolute;
+border-color: #fff;
+border-style: solid;
+border-width: 0 2px 2px 0;
+top: 10px;
+left: 16px;
+transform: rotate(45deg);
+height: 15px;
+width: 7px;
+}
+
+/* Style the close button */
+.close {
+position: absolute;
+right: 0;
+top: 0;
+padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+background-color: #f44336;
+color: white;
+}
+
+/* Style the header */
+.header {
+background-color: #dbb819;
+padding: 30px 40px;
+color: white;
+text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Style the input */
+#toDo input {
+margin: 0;
+border: none;
+border-radius: 0;
+width: 75%;
+padding: 10px;
+float: left;
+font-size: 16px;
+text-align: right;
+}
+
+/* Style the "Add" button */
+.addBtn {
+padding: 10px;
+width: 25%;
+background: #d9d9d9;
+color: #555;
+float: left;
+text-align: center;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+border-radius: 0;
+}
+
+.addBtn:hover {
+background-color: #bbb;
+}
+
+
+
+
+.share{
+    padding: 30px;
+    padding-top: 60px;
+    text-align: center;
+    font-style: italic;
+    color: teal;
+    font-size: 20px;
+    display: none;
+}
+
+
+
+#forms{
+    background-color: grey ;
+    padding: 70px;
+    margin: 0px auto;
+    margin-top: 100px;
+    color:  #2F4F4F;
+    font-weight: bold;
+    font-size: 20px;
+    display: none;
+  }
+  
+.innerform{
+    margin-left: 15%;
+}
+fieldset{
+    margin-left: 15%;
+    text-align: center;
+    position: relative;
+    width: 50%;
+
+}
+.personal input{
+    width: 200px;
+    text-align: center;
+
+}  
+
+.inputs{
+    margin-left: 25%;
+    
+}
+
+.info{
+    padding: 10px 10px;
+    width: 150px;
+    box-sizing: border-box;
+}
+input[type=submit]{
+    width: 100px;
+    font-size: 20px;
+    color:  #2F4F4F;
+}
+
+#forms img{
+
+    width: 10%;
+    float: left;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+  
+
+@media only screen and (max-width: 640px){ 
+    #header {
+        position: absolute;
+    }
+    
+    /* #cover {
+        display: flex;
+    } */
+    #cover img{
+        max-width: 100%;
+        height: auto;
+
+    }
+    #menu-icon{
+        display: inline-block;
+    }   
+    nav ul, nav:active ul{
+        display: none;
+        position: absolute;
+        padding: 10px;
+        background: gray;
+        left: 10px;
+        top: 35px;
+        width: 35%;
+    }
+    nav:hover ul{
+        display: block;
+    }
+    nav li{
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+        margin: 0;
+    }
+}

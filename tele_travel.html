@@ -1,0 +1,148 @@
+<html>
+<head>
+    <title>"Tele Travel TLV"</title>
+	<link href="tele_travel.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+	
+</head>
+<meta charset="utf-8">
+
+<header>
+	<div id="header">
+		<img src="./logo2.png">
+		<nav id="name">
+			<ul class="headUL">
+				<li>Tele Travel Blog</li>
+			</ul>
+		</nav>
+		<a href="#" id="logo"></a>
+		<nav class="menu">
+			<a href = "#" id = "menu-icon">	
+			<ul class="headUL">
+				<li onclick="myFunc0()"><a href="#home">עמוד הבית</a>
+					<ul class="subMenu">
+						<li><a href="#">רשימת המשאלות שלי</a></li>
+					</ul>
+				</li>
+				<li onclick="myFunc1()"><a href="#about">קצת עלינו</a></li>
+				<li onclick="myFunc2()" ><a href="#cover"> יעדים</a>
+					<ul class="subMenu">
+						<li onclick="areaDes('europe')"><a href="#">אירופה</a></li>
+						<li onclick="areaDes('asia')"><a href="#">אסיה</a></lionclick="areaDes('europe')">
+						<li onclick="areaDes('america')"><a href="#">אמריקה</a></li>
+						<li onclick="areaDes('sAmerica')"><a href="#">דרום אמריקה</a></li>
+						<li><a href="#">מרכז אמריקה</a></li>
+						<li><a href="#">צפון אמריקה</a></li>
+						<li onclick="areaDes('africa')"><a href="#">אפריקה</a></li>
+						<li><a href="#">אוסטרליה</a></li>
+					</ul>
+				</li>
+				<li onclick="myFunc3()"><a href="#contact">צור קשר</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<body>
+
+	<div id="cover">
+		<img class="origin" src="./cover.jpg" alt="tele travel cover" width="650px" height="320px" >
+		<div class="newCover"></div>
+	
+	</div>
+
+
+	<div id="about">
+		<h1>ברוכים הבאים לבלוג<strong><br> TELE TRAVEL TLV !</strong> </h1>
+		<h2> מציג טיסות למגוון יעדים במחירים נוחים - TELE TRAVEL TLV</h2><br>
+		<p>בלוג זה נועד במטרה לתת לכם את כל המידע הדרוש כדי לתכנן את היעד הבא שלכם
+				כל פוסט מציג יעד ספציפי בו ישנם המלצות שונות כגון: מקומות מומלצים, טיולים, מסעדות לינה וכו'.
+				
+				אנו מקווים שבלוג זה יעזור לכוון אותכם על מנת שתהנו מכל רגע בטיול שלכם! 
+		</p>
+	</div>
+
+	<div class="newsDestinations"></div>
+
+	<div id="toDo">
+		<div div id="myDIV" class="header">
+			<h2 style="margin:5px">רשימת היעדים שלי</h2>
+			<span onclick="newElement()" class="addBtn">הוסף</span>
+			<input type="text" id="myInput" placeholder="הכנס יעד..">
+		</div>
+		<ul id="myUL" class="listUL">
+				<li class="checked">איטליה</li>
+		</ul>
+
+		<div class="myList">
+			<h2>רשימת המשאלות שלי</h1>
+			<ul class="favorite"></ul>
+		</div>
+	</div>
+	
+
+	<div class="popUp">
+		<button class="" onclick="cancelPopUp()"><img src="images/download.png"></button>
+		<h1>רוצים להיות מעודכנים בכל רגע?</h1>
+		<h2>חפשו אותנו בפייסבוק!</h2>
+		<h1>Tele travel TLV</h1>
+		<img src="images/Facebook_icon_2013.svg.png">
+		
+	</div>
+
+	<!-- <div id="details" class="space2">
+		<ul>
+			<li><a href="event">Event</a></li>
+			<li class="search">
+			<li><form>
+				<input type="text" placeholder="Search..">
+				<button type="submit"><i class="fa fa-search"></i></button>
+				<p>--TODO SEARCH PLATFORM--</p>
+			</form></li>
+		</ul>
+
+	</div> -->
+
+
+	<div id="destination" class="space2">
+	</div>
+
+	<div class="share">
+		<h2>רוצים לשתף אותנו בטיולים שלכם?</h2>
+		<h3>השאירו פרטים למטה</h3>
+		<i class="fas fa-chevron-down"></i><br>
+		<i class="fas fa-chevron-down"></i>
+
+
+	</div>
+	<div id="forms">
+		<form class="innerform">
+			<fieldset class="personal">
+				<legend class="info">פרטים אישיים</legend>
+				Name: 
+				<input type="text" name="שם מלא" autofocus placeholder="הכנס בבקשה את שמך הפרטי" required /> 
+				Email: 
+				<input type="email" email="מייל" placeholder="הכנס בבקשה את כתובת המייל"  
+				required />
+			</fieldset><br>
+			<img src="./images/giphy.gif">
+			<div class="inputs">
+				<p>מין:</p>
+				<input type="radio" name="gender" value="male" checked>גבר<br>
+				<input type="radio" name="gender" value="Female">אישה<br>
+				<input type="radio" name="gender" value="Other">אחר<br><br> 
+				
+				<p>טלפון:</p>
+				<input type="tel" name="usrtel" placeholder="הכנס את מספר הטלפון " required>
+				<input type="submit" value="L'ts work!" />
+			</div>
+
+		</form>
+	</div> 
+
+	<script src="index.js"></script>
+
+</body>
+</html>
